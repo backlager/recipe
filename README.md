@@ -20,8 +20,8 @@ are.
 ```
   .brewery
     - config
-    - attachments/
-    - units/
+    - additives/
+    - grain/
 ```
 
 ## The basics
@@ -38,7 +38,7 @@ contain associated properties and values.
  
 ### Creating a new item
 
-To add a new work unit create a new file in ```.brewery/units/```. Feel good?
+To add a new work unit create a new file in ```.brewery/grain/```. Feel good?
 
 ### Properties
 
@@ -87,14 +87,14 @@ the user story to a sprint, and the sprint to a feature. How things are, or are
 not, linked is completely up to each team and may be more rigidly defined by
 additional tooling.
 
-## Attachments and other artifacts
+## Additives and other artifacts
 
 It is quite normal for projects to associate other content types to work. When
-this is necessary simply place the file within the ```.brewery/attachments/```
+this is necessary simply place the file within the ```.brewery/additives/```
 directory. Then it may be referenced in any unit like
 
 ```
-[my little pony](../attachments/rainbow_delight.png)
+[my little pony](../additives/rainbow_delight.png)
 ```
 
 ## Configuration
@@ -109,5 +109,5 @@ the properties and accepted values so new work units may use it as a guide. Then
 creating a new unit would be as simple as
 
 ```
-cat .brewery/config > .brewery/units/title.md && $EDITOR .brewery/units/title.md
+cat .brewery/config > .brewery/grain/title.md && $EDITOR .brewery/grain/title.md
 ```
